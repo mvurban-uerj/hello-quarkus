@@ -1,0 +1,17 @@
+{
+    "name": "Chateau",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "redhat.vscode-quarkus",
+                "vscjava.vscode-java-pack"
+            ]
+        }
+    },
+    "forwardPorts": [8080],
+    "postCreateCommand": "mvn quarkus:dev"
+}
