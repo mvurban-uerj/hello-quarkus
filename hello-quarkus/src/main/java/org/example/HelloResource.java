@@ -5,7 +5,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/hello")
+@Path("/hello-quarkus")
 public class HelloResource {
 
    @GET
@@ -15,10 +15,10 @@ public class HelloResource {
    }
 
    @GET
-   @Path("/marcelo")
+   @Path("/tudobem")
    @Produces(MediaType.TEXT_PLAIN)
    public String ola() {
-      return "Olá Marcelo";
+      return "Olá Quarkus REST, tudo bem?";
    }
 
 }
