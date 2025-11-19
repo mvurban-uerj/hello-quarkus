@@ -11,6 +11,14 @@ public class HelloResource {
    @GET
    @Produces(MediaType.TEXT_PLAIN)
    public String hello() {
-      return "Hello Marcelo 335988 from Quarkus REST";
+      return "Hello from Quarkus REST";
    }
+
+   @GET
+   @Path("/marcelo")
+   @Produces(MediaType.TEXT_PLAIN)
+   public String ola() {
+      return "Olá Marcelo";
+   }
+
 }
