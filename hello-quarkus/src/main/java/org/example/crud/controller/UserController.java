@@ -25,6 +25,7 @@ public class UserController {
    @POST
    @Transactional
    public Response createUser(UserEntity userEntity) {
+      
       return Response.ok(userService.createUser(userEntity)).build();
    }
 

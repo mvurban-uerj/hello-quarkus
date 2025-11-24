@@ -1,17 +1,18 @@
 {
-    "name": "Chateau",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "."
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "redhat.vscode-quarkus",
-                "vscjava.vscode-java-pack"
-            ]
-        }
-    },
-    "forwardPorts": [8080],
-    "postCreateCommand": "mvn quarkus:dev"
+  "name": "chateau",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/chateau,type=bind",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers"
+      ]
+    }
+  }
 }

@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspaces:cached
+    command: sleep infinity
+    networks:
+      - quarkus-net
+
+  mysql:
+    image: mysql:8.0
+    container_name: quarkus-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cruddb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - quarkus-net
+
+networks:
+  quarkus-net:
+    driver: bridge
+
+volumes:
+  mysql_data:
