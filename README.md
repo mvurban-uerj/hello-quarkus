@@ -11,7 +11,7 @@ Explorar e aplicar conceitos de:
 - Infraestrutura e DevOps
 
 ## Estrutura
-- `main`: base estável do projeto
+- `main`: base estável do projeto é um hello wourld que funciona através da chamada [http](http://localhost:8080/hello)
 - `study/*`: estudos de caso e experimentos
 - `feature/*`: funcionalidades consolidadas
 
