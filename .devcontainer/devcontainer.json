@@ -1,0 +1,13 @@
+{
+  "name": "Quarkus MCP Dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--env-file", ".env"],
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": true,
+      "mavenVersion": "3.9.6"
+    }
+  },
+  "remoteUser": "vscode"
+}
