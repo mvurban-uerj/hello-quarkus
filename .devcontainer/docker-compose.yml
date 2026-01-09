@@ -5,15 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ..:/workspaces:cached
     command: sleep infinity
     networks:
       - quarkus-net
 
   mysql:
-    image: mysql:8.0
-    container_name: quarkus-mysql
+    image: mysql:8.0    
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root

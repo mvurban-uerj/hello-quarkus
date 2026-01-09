@@ -4,8 +4,8 @@
     "docker-compose.yml"
   ],
   "service": "devcontainer",
-  "workspaceFolder": "/workspaces",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/chateau,type=bind",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",  
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
   "shutdownAction": "none",
   "customizations": {
     "vscode": {
