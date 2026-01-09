@@ -1,18 +1,19 @@
 {
-  "name": "chateau",
-  "dockerComposeFile": [
-    "docker-compose.yml"
-  ],
-  "service": "devcontainer",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",  
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
-  "shutdownAction": "none",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-azuretools.vscode-docker",
-        "ms-vscode-remote.remote-containers"
-      ]
-    }
-  }
+   "name": "study-quarkus-crud",
+   "dockerComposeFile": [
+      "docker-compose.yml"
+   ],
+   "service": "devcontainer",
+   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+   "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
+   "shutdownAction": "none",
+   "customizations": {
+      "vscode": {
+         "extensions": [
+            "redhat.vscode-quarkus",
+            "ms-azuretools.vscode-docker",
+            "ms-vscode-remote.remote-containers"
+         ]
+      }
+   }
 }
