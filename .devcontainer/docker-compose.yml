@@ -3,14 +3,18 @@ version: "3.9"
 services:
   devcontainer:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspaces/study-quarkus-crud
+    working_dir: /workspaces/study-quarkus-crud
+
     command: sleep infinity
     networks:
       - quarkus-net
 
   mysql:
-    image: mysql:8.0    
+    image: mysql:8.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
