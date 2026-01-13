@@ -8,4 +8,4 @@ WORKDIR /workspaces/chateau
 EXPOSE 8080
 
 # Comando padrão para modo dev
-CMD ["mvn", "quarkus:dev"]
+CMD ["sleep", "infinity"]

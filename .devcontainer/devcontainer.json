@@ -12,6 +12,5 @@
             ]
         }
     },
-    "forwardPorts": [8080],
-    "postCreateCommand": "mvn quarkus:dev"
+    "forwardPorts": [8080]
 }
